@@ -21,5 +21,5 @@ rm -rf public/*
 echo "Generating site"
 hugo
 
-echo "Updating master branch"
-cd public && git add --all && git commit -m "Publish to master (publish.sh)" && git push
+echo "Updating main branch"
+cd public && git add --all && git commit -m "Publish to main (publish.sh)" && git push
