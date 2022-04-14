@@ -1,40 +1,33 @@
-title = "Notre-Dame de Paris"
-baseURL = "https://meack2.github.io"
+baseurl = "http://example.org/"
+title = "Hugo Website"
+theme = "hugo-theme-nix"
 languageCode = "en-us"
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
-resourceDir = "../resources"
+disqusShortname = "your_disqus_shortname"
 
-DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
-Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
-googleAnalytics = ""
-enableRobotsTXT = true
-
-[languages]
-  [languages.en]
-    title = "Ananke"
+[menu]
+  [[menu.header]]
+    name = "post"
+    weight = 0
+    url = "post"
+  [[menu.header]]
+    name = "about"
     weight = 1
-    contentDir = "content/en"
-  [languages.fr]
-    title = "Ananke Fr"
-    weight = 2
-    contentDir = "content/fr"
-
-[sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-  filename = "sitemap.xml"
+    url = "about"
 
 [params]
-  text_color = ""
-  author = ""
-  favicon = ""
-  site_logo = ""
-  description = "The last theme you'll ever need. Maybe."
-  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-  background_color_class = "bg-black"
-  recent_posts_number = 3
+  GithubID = "your_github"
+  TwitterID = "your_twitter"
+  LinkedInID = "your_linkedin"
+  MediumID = "your_medium"
+  SpotifyID = "your_spotify"
+  SoundcloudID = "your_soundcloud"
+  YoutubeID = "your_youtube"
+  TelegramID = "your_telegram"
+  Name = "Mr Hugo"
+  HeaderUsername = "hugo"
+  HeaderHostname = "gohugo.io"
+  Email = "your_email"
+  About = "Hi I'm Hugo and this is my website. I am a developer, writer and family man. I like developing websites using Hugo, sports, nature, photography and travel. On this websites you can expect my projects and blog posts about everything I love. Enjoy!"
+  ProfilePicture = "/profile.jpg"
+  Favicon = "/favicon.ico"
 
-[[params.ananke_socials]]
-name = "twitter"
-url = "https://twitter.com/GoHugoIO"
