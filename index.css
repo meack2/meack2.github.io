@@ -1,0 +1,191 @@
+/* some basic setups */
+
+* {
+    /* for all elements */
+    box-sizing: border-box;
+  }
+  /* color theme and variables */
+  :root {
+    --accentColor: #3863ad;
+    --headerColor: #444444;
+    --paragraphColor: #626262;
+    --ease: all 0.4s ease;
+    --radius: 6px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+    color: var(--headerColor);
+    padding: 0px 20px;
+    background-color: #3863ad56;
+  }
+  
+  /* for all icons */
+  .icon {
+    width: 24px;
+    height: 24px;
+    margin: 0px 3px;
+  }
+  
+  /* to apply colors */
+  .accentColor {
+    color: var(--accentColor);
+  }
+  .paragraph {
+    color: var(--paragraphColor);
+  }
+  
+  a {
+    color: var(--headerColor);
+    /* remove default underlining */
+    text-decoration: none;
+  }
+  
+  /* to center elements */
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* to group sections and add margins*/
+  section {
+    margin: 150px 0px;
+  }
+  
+  /* for background images */
+  .backgroundFix {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+  
+  /* to create total separation between elements */
+  .flex-space-btw {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* to apply equal spacing between elements */
+  .grid2,
+  .grid3 {
+    display: grid;
+    /* place in twos */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .grid3 {
+    /* place in three */
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* to create responsive in-line elements */
+  .flex-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* wrap around elements and space on both sides */
+  .container {
+    width: 85%;
+    margin: auto;
+  }
+  
+  .bold {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* for a fancy scroll bar */
+  /* width */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  
+  /* scroll bar Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--accentColor);
+    border-radius: 10px;
+  }
+  
+  /* scroll bar Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--headerColor);
+  }
+  
+  .padChild {
+    padding: 25px;
+  }
+  
+  /* other styles */
+  
+  /* nav Section */
+  .topHeader .logo {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  @media (max-width: 500px) {
+    .topHeader .flex-space-btw {
+      display: block;
+      text-align: center;
+    }
+  }
+  
+  /* About Section */
+  .aboutSection .aboutImg {
+    height: 350px;
+    width: 350px;
+    margin-left: 150px;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 1000px) {
+    .aboutSection .aboutImg {
+      width: 80%;
+    }
+    @media (max-width: 800px) {
+      .aboutSection {
+        display: block;
+      }
+      .aboutSection .aboutImg {
+        display: none;
+      }
+    }
+  }
+  
+  /* experience section */
+  .experience-section .resume {
+    margin-top: 30px;
+    display: block;
+  }
+  
+  /* portfolio section */
+  .portfolio-section p {
+    font-size: 14px;
+  }
+  .portfolio-section .portfolio-image {
+    height: 40px;
+    width: 40px;
+  }
+  @media (max-width: 800px) {
+    .portfolio-section .grid3 {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 550px) {
+      .portfolio-section .grid3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
